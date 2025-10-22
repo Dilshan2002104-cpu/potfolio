@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Full Stack & ML Developer
+            Full Stack Developer
           </motion.h2>
 
           <motion.p

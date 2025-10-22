@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               Praveen Dilshan
             </h3>
             <p className="text-gray-400 mb-6">
-              Full Stack & ML Developer
+              Full Stack Developer
             </p>
             
             <div className="border-t border-gray-800 pt-6">
