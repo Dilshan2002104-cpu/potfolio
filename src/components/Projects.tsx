@@ -10,6 +10,17 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: "Hospital Annual Report Generation System",
+      description: "🎓 Final Year Project: An intelligent automated system for generating comprehensive hospital annual reports. Features advanced data analytics, statistical analysis, automated report compilation from hospital data, customizable report templates, and streamlined compliance reporting. Built to transform complex healthcare data into professional annual documentation.",
+
+      technologies: ["Spring Boot", "React", "MySQL", "PDF Generation", "CI/CD", "Docker", "AWS"],
+      image:
+        "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800",
+      gradient: "from-blue-600 to-purple-600",
+      demoUrl: "http://nindt.duckdns.org/",
+      githubUrl: "https://github.com/Dilshan2002104-cpu/hospital-annual-report-generation-system-final-year-project",
+    },
+    {
       title: "employee leave management system",
       description:
         "A robust employee leave management system built with React and Spring Boot. Features include secure login, leave request handling, department-level approvals, and role-based access control.",
@@ -17,18 +28,18 @@ const Projects: React.FC = () => {
       image:
         "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800",
       gradient: "from-green-400 to-blue-500",
-      demoUrl: "#",
+      demoUrl: "http://itum-elms.duckdns.org/",
       githubUrl: "https://github.com/Dilshan2002104-cpu/Dilshan2002104-cpu-employee-leave-management-system",
     },
     {
       title: "Forever ecommerce application",
-      description: "A modern and responsive eCommerce frontend built with React. Features include dynamic product listings, category-based browsing, shopping cart functionality, and seamless user navigation to enhance the online shopping experience.",
+      description: "A modern and responsive eCommerce frontend built with React. Features include dynamic product listings, category-based browsing, shopping cart functionality, and seamless user navigation. Implemented with automated CI/CD pipeline for continuous deployment and enhanced development workflow.",
 
-      technologies: ["react"],
+      technologies: ["react", "CI/CD"],
       image:
         "/react.JPG",
       gradient: "from-purple-400 to-pink-500",
-      demoUrl: "#",
+      demoUrl: "http://forever-ecommerce.duckdns.org/",
       githubUrl: "https://github.com/Dilshan2002104-cpu/E-Commerce-using-react",
     },
     {
@@ -42,8 +53,6 @@ const Projects: React.FC = () => {
       demoUrl: "#",
       githubUrl: "https://github.com/Dilshan2002104-cpu/conference-manager",
     },
-
-    
   ];
 
   return (
@@ -111,19 +120,21 @@ const Projects: React.FC = () => {
                     </div>
 
                     <div className="flex gap-3">
-                      <motion.a
-                        href={project.demoUrl}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </motion.a>
+                      {project.demoUrl !== "#" && (
+                        <motion.a
+                          href={project.demoUrl}
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </motion.a>
+                      )}
 
                       <motion.a
                         href={project.githubUrl}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                        className={`${project.demoUrl === "#" ? "w-full" : "flex-1"} flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
