@@ -85,7 +85,7 @@ const Skills: React.FC = () => {
               Additional Technologies
             </h3>
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-              {['MySQL', 'Git', 'Docker', 'AWS', 'Linux', 'REST APIs', 'MongoDB'].map((tech, index) => (
+              {['MySQL', 'Git', 'Docker', 'AWS', 'Linux', 'REST APIs', 'MongoDB', 'Agentic AI'].map((tech, index) => (
                 <motion.span
                   key={tech}
                   className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:shadow-md transition-shadow duration-200"
